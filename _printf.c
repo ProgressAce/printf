@@ -16,20 +16,19 @@ int _printf(const char *format, ...)
 	int (*func)(va_list);
 
 	if (format == NULL)
-		return (NULL);
+		return (-1);
 
 	va_start(va, format);
 	for (i = 0; format[i]; i++)
 	{
 		/* printing formatted part of string */
-		if (format[i] == '%' && format[i - 1] != '\\')
+		if (format[i] == '%')
 		{
-			func = get_func(format[i + 1]);
+			func = get_func(&format[i + 1]);
 			if (func)
 			{
 				p_count += func(va);
 				i += 2;
-				p_count++;
 			}
 		}
 		if (format[i] == '\0')
@@ -47,6 +46,7 @@ int _printf(const char *format, ...)
 			continue;
 		}
 	}
+	va_end(va);
 	return (p_count);
 }
 
@@ -57,17 +57,17 @@ int _printf(const char *format, ...)
  * Return: pointer to the needed print function
  */
 
-int (*get_func(const char *spec))
+int (*get_func(const char *spec)) (va_list)
 {
 	print_f formats[] = {
 		{"c", p_char},
-		{"s", p_string},
+		/*{"s", p_string},*/
 		{NULL, NULL}
 	};
 	int i = 0;
 
 	/* return the function for required print format */
-	while (formats[i])
+	while (formats[i].spec)
 	{
 		if (formats[i].spec[0] == spec[0])
 			return (formats[i].func);
