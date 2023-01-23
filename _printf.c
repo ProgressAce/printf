@@ -61,7 +61,7 @@ int (*get_func(const char *spec)) (va_list)
 {
 	print_f formats[] = {
 		{"c", p_char},
-		/*{"s", p_string},*/
+		{"s", p_string},
 		{NULL, NULL}
 	};
 	int i = 0;
