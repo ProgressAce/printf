@@ -62,7 +62,12 @@ int (*get_func(const char *spec)) (va_list)
 	print_f formats[] = {
 		{"c", p_char},
 		{"s", p_string},
+		{"d", p_decimal},
 		{"b", p_binary},
+		{"u", p_unsigned_int},
+		{"o", p_octal},
+		/*{"x", p_x},*/
+		/*{"X", p_X},*/
 		{NULL, NULL}
 	};
 	int i = 0;
