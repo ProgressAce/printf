@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
-  * p_string - writes the character c to stdout
+  * print_string - writes the character c to stdout
   * @s: string to be printed
   * Return: 1 as success
   */
 
-int p_string(va_list s)
+int print_string(va_list s)
 {
 	char *my_string;
 	int i = 0;
