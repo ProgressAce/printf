@@ -68,6 +68,8 @@ int (*get_func(const char *spec)) (va_list)
 		{"o", p_octal},
 		/*{"x", p_x},*/
 		/*{"X", p_X},*/
+		{"r", print_rev},
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
 	int i = 0;
