@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
+/* for the normal specifiers */
 int _putchar(char c);
 int _printf(const char *format, ...);
 int p_char(va_list c);
@@ -30,6 +30,8 @@ int print_rev(va_list r);
 int print_rot13(va_list R);
 int get_flags(const char *format, int *i);
 
+/* the symbols */
+int p_percentage(va_list symbol);
 
 /**
  * print_format - Struct print_format
