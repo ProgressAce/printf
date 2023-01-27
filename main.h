@@ -26,6 +26,7 @@ int p_octal(va_list o);
 int p_x(va_list x);
 int p_X(va_list X);
 int p_rev(va_list r);
+int print_rev(va_list r);
 int print_rot13(va_list R);
 int get_flags(const char *format, int *i);
 

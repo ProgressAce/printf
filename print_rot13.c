@@ -1,5 +1,4 @@
-#include "main2.h"
-#include <stdio.h>
+#include "main.h"
 
 /**
  * print_rot13 - makes a string into rot13.

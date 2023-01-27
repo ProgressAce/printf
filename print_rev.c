@@ -1,6 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include "main2.h"
+#include "main.h"
 
 /**
   * print_rev - prints the dtring reverse
