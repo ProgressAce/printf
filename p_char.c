@@ -16,11 +16,13 @@ int p_char(va_list c)
 	return (1);
 }
 
-int p_percentage(void)
+int p_percentage(va_list symbol)
 {
 	int p_count = 0;
 
-	_putchar("%");
+	UNUSED(symbol);
+
+	_putchar('%');
 	p_count++;
 
 	return (p_count);

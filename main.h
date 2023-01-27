@@ -1,6 +1,7 @@
 #ifndef PRINTF
 #define PRINTF
 #define UINT_MAX 4294967295
+#define UNUSED(x) (void)(x)
 
 /* macros that might be removed */
 #define F_MINUS 1
