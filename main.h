@@ -2,6 +2,13 @@
 #define PRINTF
 #define UINT_MAX 4294967295
 
+/* macros that might be removed */
+#define F_MINUS 1
+#define F_PLUS 2
+#define F_ZERO 4
+#define F_HASH 8
+#define F_SPACE 16
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,7 +27,7 @@ int p_x(va_list x);
 int p_X(va_list X);
 int p_rev(va_list r);
 int print_rot13(va_list R);
-int get_flags(const char *format, int i*);
+int get_flags(const char *format, int *i);
 
 
 /**
