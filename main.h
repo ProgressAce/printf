@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int p_char(va_list c);
@@ -17,7 +18,7 @@ int p_unsigned_int(va_list u);
 int p_octal(va_list o);
 int p_x(va_list x);
 int p_X(va_list X);
-int p_rev(va_list r)
+int p_rev(va_list r);
 int print_rot13(va_list R);
 int get_flags(const char *format, int i*);
 
