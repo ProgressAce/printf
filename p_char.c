@@ -15,3 +15,13 @@ int p_char(va_list c)
 	_putchar(ch);
 	return (1);
 }
+
+int p_percentage(void)
+{
+	int p_count = 0;
+
+	_putchar("%");
+	p_count++;
+
+	return (p_count);
+}

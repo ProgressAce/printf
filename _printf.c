@@ -70,6 +70,7 @@ int (*get_func(const char *spec)) (va_list)
 		/*{"X", p_X},*/
 		{"r", print_rev},
 		{"R", print_rot13},
+		{"%", p_percentage},
 		{NULL, NULL}
 	};
 	int i = 0;
